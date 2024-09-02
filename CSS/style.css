@@ -17,7 +17,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background-color: #fff;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 a {
@@ -80,7 +80,7 @@ img {
 }
 
 .hero .container {
-    background: url('../img/hero-bg.png') no-repeat;
+    background: url('/img/hero-bg.png') no-repeat;
     background-size: contain;
     background-position: center bottom;
     height: 550px;
@@ -466,7 +466,8 @@ img {
     }
 
     .hero .container {
-        background: url('../img/hero-bg-mobile.png') no-repeat;
+        
+        background: url('/img/hero-bg-mobile.png') no-repeat;
         background-size: 350px 400px;
         background-position: bottom;
         height: 770px;

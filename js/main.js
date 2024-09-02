@@ -18,26 +18,28 @@ document.addEventListener('DOMContentLoaded', () => {
         groupBody.classList.toggle('open');
 
         // Close other open FAQ body
-        const otherGroups = faqContainer.querySelector('.faq-group')
+        const otherGroups = faqContainer.querySelectorAll('.faq-group');
 
-        otherGroups.forEach ((otherGroup) =>{
-            if(otherGroup !== group){
-                const otherGroupBody = otherGroup.querySelector('.faq-group-body')
-                const otherIcon = otherGroup.querySelector('.faq-group-header i')
+        otherGroups.forEach((otherGroup) => {
+            if (otherGroup !== group) {
+                const otherGroupBody = otherGroup.querySelector('.faq-group-body');
+                const otherIcon = otherGroup.querySelector('.faq-group-header i');
 
-                otherGroupBody.classList.remove('open')
-                otherIcon.classList.remove('fa-minus')
-                otherIcon.classList.remove('fa-plus')
+                otherGroupBody.classList.remove('open');
+                otherIcon.classList.remove('fa-minus');
+                otherIcon.classList.add('fa-plus');
             }
-        })
+        });
     });
 });
-//  Mobile Menu
 
-document.getEventListener('DOMContentLoaded', () => {
-    const hamburgarButton = document.querySelector ('.hamburgar-button');
-    const mobileMenu = document.querySelector ('.mobile-menu');
+// Mobile Menu
 
-    hamburgarNutton.addEventListener('click' , () => 
-    mobileMenu.classList.toggle('active'))
-})
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgarButton = document.querySelector('.hamburgar-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    hamburgarButton.addEventListener('click', () => 
+        mobileMenu.classList.toggle('active')
+    );
+});
